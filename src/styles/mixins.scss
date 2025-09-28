@@ -1,0 +1,30 @@
+// mixins.scss
+
+// Flexbox utilities
+@mixin flex-center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+@mixin flex-between {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+// Responsive typography
+@mixin responsive-font($base-size, $mobile-size, $breakpoint) {
+  font-size: $base-size;
+
+  @media (max-width: $breakpoint) {
+    font-size: $mobile-size;
+  }
+}
+
+// Media query shortcut
+@mixin respond-to($breakpoint) {
+  @media (max-width: $breakpoint) {
+    @content;
+  }
+}

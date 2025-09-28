@@ -1,0 +1,18 @@
+@use '../functions' as f;
+@use '../layout/media' as m;
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: f.spacing(2);
+  margin-bottom: f.spacing(3);
+  margin-top: f.spacing(3);
+
+  @include m.respond-to(lg) {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  @include m.respond-to(md) {
+    grid-template-columns: 1fr;
+  }
+}

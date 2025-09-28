@@ -1,0 +1,51 @@
+@use '../variables' as v;
+@use '../functions' as f;
+@use '../mixins' as m;
+@use '../typography' as t;
+
+.card {
+  background-color: v.$color-background;
+  border: 1px solid v.$color-muted;
+  border-radius: 8px;
+  padding: f.spacing(2);
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.05);
+  transition: box-shadow 0.3s ease;
+
+  &:hover {
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  }
+
+  &__title {
+    font-size: f.modular-scale(2);
+    font-weight: 600;
+    margin-bottom: f.spacing(1);
+    color: v.$color-text;
+  }
+
+  &__content {
+    font-size: f.modular-scale(0);
+    line-height: 1.6;
+    color: v.$color-muted;
+  }
+
+  &__actions {
+    margin-top: f.spacing(2);
+    display: flex;
+    justify-content: flex-end;
+    gap: f.spacing(1);
+  }
+}
+
+@include m.respond-to(v.$breakpoint-md) {
+  .card {
+    padding: f.spacing(1.5);
+  }
+
+  .card__title {
+    font-size: f.modular-scale(1);
+  }
+
+  .card__content {
+    font-size: f.modular-scale(-1);
+  }
+}

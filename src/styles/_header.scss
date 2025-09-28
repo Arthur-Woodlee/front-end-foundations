@@ -1,0 +1,52 @@
+@use 'variables' as v;
+@use 'mixins' as m;
+@use 'functions' as f;
+@use 'typography' as t;
+
+.header {
+  @include m.flex-between;
+  padding: f.spacing(1.5) f.spacing(2);
+  background-color: v.$color-primary;
+  color: v.$color-accent;
+
+  &__title {
+    font-size: f.modular-scale(3);
+    font-weight: 700;
+    color:v.$color-title;
+  }
+
+  &__nav {
+    display: flex;
+    gap: f.spacing(1);
+  }
+
+  &__nav-item {
+    color: v.$color-muted;
+    text-decoration: none;
+    font-weight: 500;
+    transition: color 0.3s ease;
+
+    &:hover {
+      color: v.$color-accent;
+    }
+
+    &--active {
+      color: v.$color-accent;
+      border-bottom: 2px solid v.$color-accent;
+    }
+  }
+}
+
+@include m.respond-to(v.$breakpoint-md) {
+  .header {
+    flex-direction: column;
+    align-items: flex-start;
+    padding: f.spacing(1);
+  }
+
+  .header__nav {
+    flex-direction: column;
+    gap: f.spacing(0.5);
+    margin-top: f.spacing(1);
+  }
+}

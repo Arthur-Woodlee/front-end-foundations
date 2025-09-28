@@ -1,0 +1,51 @@
+@use 'variables' as v;
+@use 'functions' as f;
+
+h1 {
+  font-size: f.modular-scale(4); // Big headline
+  margin-bottom: f.spacing(1.5);
+  font-weight: 700;
+  color: v.$color-text;
+}
+
+h2 {
+  font-size: f.modular-scale(3);
+  margin-bottom: f.spacing(1.25);
+  font-weight: 600;
+  color: v.$color-text;
+}
+
+h3 {
+  font-size: f.modular-scale(2);
+  margin-bottom: f.spacing(1);
+  font-weight: 600;
+  color: v.$color-text;
+}
+
+h4 {
+  font-size: f.modular-scale(1);
+  margin-bottom: f.spacing(0.75);
+  font-weight: 500;
+  color: v.$color-text;
+}
+
+h5 {
+  font-size: f.modular-scale(0);
+  margin-bottom: f.spacing(0.5);
+  font-weight: 500;
+  color: v.$color-text;
+}
+
+h6 {
+  font-size: f.modular-scale(-1);
+  margin-bottom: f.spacing(0.5);
+  font-weight: 500;
+  color: v.$color-text;
+}
+
+p {
+  font-size: v.$font-size-base;
+  line-height: 1.6;
+  margin-bottom: f.spacing(1);
+  color: v.$color-muted;
+}

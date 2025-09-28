@@ -1,0 +1,31 @@
+@use 'variables' as v;
+@use 'mixins' as m;
+@use 'functions' as f;
+@use 'typography' as t;
+
+.tech {
+  padding: f.spacing(2);
+  margin-bottom: f.spacing(2);
+  background-color: v.$color-background;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+
+  &__title {
+    font-size: f.modular-scale(2);
+    font-weight: 600;
+    margin-bottom: f.spacing(1);
+    color: v.$color-text;
+  }
+
+  &__desc {
+    font-size: f.modular-scale(0);
+    line-height: 1.6;
+    color: v.$color-muted;
+  }
+}
+
+@include m.respond-to(v.$breakpoint-md) {
+  .tech {
+    padding: f.spacing(1);
+  }
+}
