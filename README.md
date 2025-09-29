@@ -50,6 +50,9 @@ FRONT_END_FOUNDATIONS/
 ├── package-lock.json          # Dependency tree lock file
 ├── README.md                  # Project documentation
 └── webpack.config.js          # Webpack configuration
+
+# Note: The 'dist/' directory is not included in the repository.
+# It is generated automatically when you run 'npx webpack' to build the project.
 </code></pre>
 
 <h2>Getting Started</h2>
@@ -64,6 +67,7 @@ FRONT_END_FOUNDATIONS/
   <li>Start the development server using Webpack:
     <pre><code>npx webpack serve</code></pre>
     <p>This will automatically open the app in your default browser on an available port (e.g., <code>http://localhost:5173</code> or similar).</p>
+    <p><strong>Note:</strong> <code>webpack serve</code> compiles assets in memory for development — no files are written to disk. To generate actual output files in the <code>dist/</code> directory, run <code>npx webpack</code>.</p>
   </li>
   <li>Explore the codebase using the VS Code file explorer, and preview live changes directly in your browser.</li>
 </ol>
