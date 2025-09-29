@@ -8,5 +8,6 @@ document.addEventListener('DOMContentLoaded', () => {
     const newTheme = currentTheme === 'dark' ? 'light' : 'dark';
     document.body.setAttribute('data-theme', newTheme);
     toggle.textContent = newTheme === 'dark' ? 'Light Mode' : 'Dark Mode';
+    console.log(`Switched to ${newTheme} mode`);
   });
 });

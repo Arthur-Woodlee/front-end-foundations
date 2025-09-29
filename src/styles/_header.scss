@@ -37,6 +37,10 @@
   }
 }
 
+.undefinedClass {
+  color: red;
+}
+
 @include m.respond-to(v.$breakpoint-md) {
   .header {
     flex-direction: column;
