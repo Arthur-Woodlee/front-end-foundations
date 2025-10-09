@@ -5,10 +5,17 @@ export default [
   js.configs.recommended,
   {
     languageOptions: {
-      env: {
-        browser: true,
-        es2021: true,
+      globals: {
+        console: 'readonly',
+        document: 'readonly',
+        window: 'readonly',
+        setTimeout: 'readonly',
+        clearTimeout: 'readonly',
+        setInterval: 'readonly',
+        clearInterval: 'readonly',
       },
+      sourceType: 'module',
+      ecmaVersion: 2021,
     },
     rules: {
       'no-unused-vars': 'warn',
