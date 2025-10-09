@@ -1,12 +1,13 @@
-// eslint.config.js
+// eslint.config.mjs
 import js from '@eslint/js';
 
 export default [
   js.configs.recommended,
   {
     languageOptions: {
-      globals: {
-        ...js.environments.browser.globals,
+      env: {
+        browser: true,
+        es2021: true,
       },
     },
     rules: {
