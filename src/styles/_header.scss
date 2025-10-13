@@ -5,7 +5,8 @@
 
 .header {
   @include m.flex-between;
-  padding: f.spacing(1.5) f.spacing(2);
+
+  padding: f.spacing(4) f.spacing(2);
   background-color: v.$color-primary;
   color: v.$color-accent;
 
